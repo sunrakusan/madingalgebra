@@ -1,0 +1,371 @@
+:root {
+  --primary: #00c5cd;
+  --bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: #010101;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--bg);
+  border-bottom: 1px solid #f0f0f0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  color: #010101;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  align-items: center;
+  display: flex;
+}
+.navbar .logo-image {
+  border-radius: 70%;
+  height: auto;
+  margin-right: 5px;
+  width: 60px;
+}
+
+.navbar .navbar-nav a {
+  color: #010101;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #010101;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/photo-gedung.-KEBALIKpng.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(253, 253, 253) 8%,
+    rgba(250, 250, 250, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 3.5em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content P {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* about section */
+.prestasi,
+.mading {
+  padding: 10rem 7% 1.4rem;
+}
+
+.prestasi h2,
+.mading h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.prestasi h2 span,
+.mading h2 span {
+  color: var(--primary);
+}
+
+.prestasi .row {
+  display: flex;
+}
+
+.prestasi .row .about-img1 {
+  flex: 1 1 15rem;
+}
+.prestasi .row .about-img2 {
+  flex: 1 1 15rem;
+}
+.prestasi .row .about-img3 {
+  flex: 1 1 15rem;
+}
+
+.prestasi .row .about-img1 img,
+.prestasi .row .about-img2 img,
+.prestasi .row .about-img3 img {
+  width: 100%;
+
+  border-radius: 5%;
+}
+
+.prestasi .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.prestasi .row .content h3,
+.prestasi .row .content h4,
+.prestasi .row .content h5 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.prestasi .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* menu section */
+.mading h2 {
+  margin-bottom: 1rem;
+}
+.mading p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.mading h6 {
+  font-size: 1rem;
+}
+
+.mading .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.mading {
+  text-align: center;
+  padding: 4rem;
+}
+
+.mading .row .mading img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.mading .row .mading-tittle {
+  margin: 1rem auto 0.5rem;
+}
+
+/* footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem;
+}
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: #010101;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #010101;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .prestasi .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+  }
+
+  .prestasi {
+    text-align: center;
+    padding: 4rem;
+  }
+
+  .prestasi .row .about-img1 img,
+  .prestasi .row .about-img2 img,
+  .prestasi .row .about-img3 img {
+    width: 25rem;
+    height: 20rem;
+  }
+
+  .prestasi .row .prestasi-tittle {
+    margin: 1rem auto 0.5rem;
+  }
+
+  .mading p {
+    font-size: 1.2rem;
+  }
+
+  .mading .row .mading img {
+    width: 25rem;
+    height: 30rem;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
